@@ -1,0 +1,241 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family= Noto +Sans:ital,wght@1,900 & display=swap');
+
+:root {
+    --cor0: #C5EBD6;
+    --cor1: #83E1AD;
+    --cor2: #3DDC84;
+    --cor3: #2FA866;
+    --cor4: #1a5c37;
+    --cor5: #063D1E;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-texto: 'Sriracha', cursiva;
+    --fonte-numero: 'Noto Sans', sem serifa;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a.externo::before {
+    content: '\27A1\00a0\00a0';
+}
+
+body {
+    background-color: #ecf4fb;
+    background: url(imagens/fundo/fundo-madeira.jpg) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+}
+
+h1::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    z-index: -1 ;
+}
+
+h1 span img {
+    background: url(imagens/fundo/fundo-madeira.jpg) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0 15px;
+}
+
+h1 span {
+    background: url(imagens/fundo/fundo-madeira.jpg) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0 15px;
+}
+
+h2 {
+    color:black;
+    padding: 10PX;
+    line-height: 1em;
+    margin: auto;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 15px 15px 10px  rgba(0, 0, 0, 0.342);  
+}
+
+h3 {
+    color:rgba(0, 0, 0, 0.849);
+    text-align: justify;
+    font-style: italic;
+    font-size: 1.5em;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20PX;
+    padding-bottom: 20px;
+}
+
+nav {
+    background-color:rgba(88, 80, 80, 0.541)  ;
+    padding: 10px; 
+}
+
+nav > a {
+    color:rgb(48, 3, 3);
+    border-radius: 10px;
+    font-family: var(--fonte-texto);
+    font-size: 1.5em; 
+    font-weight: bolder;    
+    padding: 10px 40px;
+    margin-left: 10px;
+    text-decoration: none; 
+    transition-duration: .5s;
+}
+
+nav > a:hover {
+    background-color: rgba(255, 255, 255, 0.534);
+    color:black;
+}
+
+article {
+    max-width: 900px;
+}
+
+.um {
+    margin: 40px auto;
+    width: 80vw;    
+    
+}
+.dois {
+    margin: 55px 0px 15px 0px;
+    text-align: center;
+    width: 60px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.466);   
+}
+.tres {
+    font-family: var(--fonte-texto);
+    text-align: justify;
+    font-size: 2em;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.466);
+    line-height: 1.2em;
+}
+.quatro {
+    display: flex;
+    justify-content: space-evenly;
+    width: 98%;
+    margin: auto;
+}
+
+p {
+    color:rgba(0, 0, 0, 0.849);
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: .9em;
+    max-width: 900px;
+    margin: auto;
+    padding: 20PX;
+}
+
+.img-gallery {
+    width: 80%;
+    margin: 50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap: 30px;
+}
+
+.img-gallery img {
+    width: 100%;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.img-gallery img:hover {
+    transform: scale(1.2);
+}
+
+.ful-img {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.ful-img span {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ful-img img {
+    width: 90%;
+    max-width: 600px;
+}
+
+footer {
+    display: flex; 
+    justify-content: center;
+    font-size: .800em;
+    padding: 8px;
+    margin: auto;  
+}
+
+footer > a {
+    margin: auto;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    margin: 2px;
+}
+
+figure {
+    background-color:rgba(31, 27, 27, 0.61);
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+figure img {
+    margin: auto;
+    width: 50%;
+    height: 50%;
+}
+
+
+@media  and (max-width:400px) {
+    h1 {
+        text-decoration: underline;
+    }
+
+    h1::before {
+        display: none;
+    }
+
+    h1 span {
+        padding: 0px;
+    }
+}
