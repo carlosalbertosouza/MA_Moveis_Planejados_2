@@ -22,9 +22,9 @@
     font-family: sans-serif;
 }
 
-a.externo::before {
+/*a.externo::before {
     content: '\27A1\00a0\00a0';
-}
+}*/
 
 body {
     background-color: #ecf4fb;
@@ -85,6 +85,7 @@ h3 {
     margin-top: 20px;
     padding: 20PX;
     padding-bottom: 20px;
+    text-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.438);
 }
 
 nav {
@@ -130,7 +131,7 @@ article {
     text-align: justify;
     font-size: 2em;
     border-radius: 5px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.466);
+    
     line-height: 1.2em;
 }
 .quatro {
@@ -149,6 +150,7 @@ p {
     max-width: 900px;
     margin: auto;
     padding: 20PX;
+    text-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.438);
 }
 
 .img-gallery {
